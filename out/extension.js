@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var vscode = require("vscode");
 var cp = require("child_process");
 var path = require("path");
+var os = require("os");
+var fs = require("fs");
 var FunnyDocumentFormatter = /** @class */ (function () {
     function FunnyDocumentFormatter() {
     }
@@ -17,9 +19,21 @@ var FunnyDocumentFormatter = /** @class */ (function () {
             var stdout = '';
             var stderr = '';
             // Use spawn instead of exec to avoid maxBufferExceeded error
-            var goPath = process.env['GOPATH'];
             var funnyPath = process.env['FUNNY_BIN'];
-            funnyPath = funnyPath ? funnyPath : path.join(goPath, 'bin', 'funny');
+            if (!funnyPath) {
+                var goPath = process.env['GOPATH'];
+                if (!goPath) {
+                    goPath = path.join(os.homedir(), 'go');
+                }
+                funnyPath = path.join(goPath, 'bin', 'funny');
+                if (!fs.existsSync(funnyPath)) {
+                    console.error("funny path " + funnyPath + " not exists");
+                }
+                else {
+                    console.error('FUNNY_BIN and GOPATH path not defined');
+                }
+            }
+            console.log(funnyPath);
             var p = cp.spawn(funnyPath, ['--format']);
             p.stdout.setEncoding('utf8');
             p.stdout.on('data', function (data) {
