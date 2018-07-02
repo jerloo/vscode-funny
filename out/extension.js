@@ -29,9 +29,6 @@ var FunnyDocumentFormatter = /** @class */ (function () {
                 if (!fs.existsSync(funnyPath)) {
                     console.error("funny path " + funnyPath + " not exists");
                 }
-                else {
-                    console.error('FUNNY_BIN and GOPATH path not defined');
-                }
             }
             console.log(funnyPath);
             var p = cp.spawn(funnyPath, ['--format']);

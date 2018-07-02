@@ -30,8 +30,6 @@ class FunnyDocumentFormatter implements vscode.DocumentFormattingEditProvider {
 				funnyPath = path.join(goPath, 'bin', 'funny')
 				if (!fs.existsSync(funnyPath)) {
 					console.error(`funny path ${funnyPath} not exists`)
-				}else{
-					console.error('FUNNY_BIN and GOPATH path not defined')
 				}
 			}
 
