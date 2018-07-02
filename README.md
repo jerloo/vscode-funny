@@ -20,7 +20,7 @@ Funny is an extension for VS Code which provides support for the Funny language.
 
 ## Extension Settings
 
-***Not settings now***
+***No settings now***
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
