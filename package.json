@@ -7,45 +7,45 @@
     "engines": {
         "vscode": "^1.24.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jeremaihloo/vscode-funny"
+    },
     "categories": [
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [
-            {
-                "id": "funny",
-                "aliases": [
-                    "Funny",
-                    "funny"
-                ],
-                "extensions": [
-                    ".fun",
-                    ".fl",
-                    ".fs",
-                    ".funny"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "funny",
-                "scopeName": "source.fun",
-                "path": "./syntaxes/funny.tmLanguage.json"
-            }
-        ]
+        "languages": [{
+            "id": "funny",
+            "aliases": [
+                "Funny",
+                "funny"
+            ],
+            "extensions": [
+                ".fun",
+                ".fl",
+                ".fs",
+                ".funny"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "funny",
+            "scopeName": "source.fun",
+            "path": "./syntaxes/funny.tmLanguage.json"
+        }]
     },
     "activationEvents": [
-		"*"
-	],
+        "*"
+    ],
     "main": "./out/extension",
     "icon": "images/funny-logo.png",
-	"scripts": {
-		"vscode:prepublish": "tsc -p ./",
-		"compile": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"tslint": "tslint -c tslint.json src/extension.ts"
-	},
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "tslint": "tslint -c tslint.json src/extension.ts"
+    },
     "devDependencies": {
         "@types/node": "^10.5.1",
         "typescript": "^2.9.2",
