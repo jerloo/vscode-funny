@@ -4,6 +4,7 @@
 
 import * as vscode from 'vscode';
 import cp = require('child_process');
+import path = require('path');
 
 class FunnyDocumentFormatter implements vscode.DocumentFormattingEditProvider {
 	provideDocumentFormattingEdits(document: vscode.TextDocument,
@@ -18,7 +19,10 @@ class FunnyDocumentFormatter implements vscode.DocumentFormattingEditProvider {
 				let stderr = '';
 	
 				// Use spawn instead of exec to avoid maxBufferExceeded error
-				const p = cp.spawn("/Users/jj/gocode/bin/funny", ['--format']);
+				const goPath = process.env['GOPATH'];
+				let funnyPath = process.env['FUNNY_BIN']
+				funnyPath = funnyPath ? funnyPath : path.join(goPath, 'bin', 'funny')
+				const p = cp.spawn(funnyPath, ['--format']);
 				p.stdout.setEncoding('utf8');
 				p.stdout.on('data', data => {
 					console.log(data)

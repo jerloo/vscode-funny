@@ -5,6 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var vscode = require("vscode");
 var cp = require("child_process");
+var path = require("path");
 var FunnyDocumentFormatter = /** @class */ (function () {
     function FunnyDocumentFormatter() {
     }
@@ -16,7 +17,10 @@ var FunnyDocumentFormatter = /** @class */ (function () {
             var stdout = '';
             var stderr = '';
             // Use spawn instead of exec to avoid maxBufferExceeded error
-            var p = cp.spawn("/Users/jj/gocode/bin/funny", ['--format']);
+            var goPath = process.env['GOPATH'];
+            var funnyPath = process.env['FUNNY_BIN'];
+            funnyPath = funnyPath ? funnyPath : path.join(goPath, 'bin', 'funny');
+            var p = cp.spawn(funnyPath, ['--format']);
             p.stdout.setEncoding('utf8');
             p.stdout.on('data', function (data) {
                 console.log(data);
