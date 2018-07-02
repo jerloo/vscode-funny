@@ -1,22 +1,26 @@
-# funny README
+# Funny
 
-This is the README for your extension "funny". After writing up a brief description, we recommend including the following sections.
+Funny is an extension for VS Code which provides support for the Funny language.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
+- Syntax-highlighting
+- Snippet
+- Emmet
+- Linting / Error Checking
+- Formatting
+- Auto Completion
+- Debugging
 
 \!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Funny installed (https://github.com/jeremaihloo/funny)
 
 ## Extension Settings
+
+***Not settings now***
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
@@ -35,31 +39,26 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.0.1
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release of vscode-funny.
 
 -----------------------------------------------------------------------------------------------------------
 
-## Working with Markdown
+## Roadmap
 
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+- ~~Syntax-highlighting~~~
+- Snippet
+- Emmet
+- Linting / Error Checking
+- ~~Formatting~~
+- Auto Completion
+- Debugging
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+## Contribution
 
-### For more information
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## License
 
-**Enjoy!**
+MIT © jeremaihloo
