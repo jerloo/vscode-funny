@@ -47,12 +47,12 @@ Initial release of vscode-funny.
 
 ## Roadmap
 
-- ~~Syntax-highlighting~~~
+- ~~Syntax-highlighting~~
 - Snippet
 - Emmet
 - Linting / Error Checking
 - ~~Formatting~~
-- Auto Completion
+- ~~Auto Completion~~
 - Debugging
 
 ## Contribution
